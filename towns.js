@@ -38,7 +38,8 @@ function addTown() {
 	let townName = $('#townNameForAdd').val();
 	$('#townNameForAdd').val('');
 	$('#towns').append($('<option>').text(townName));
-	$('#result').text(townName + " added.");
+	//$('#result').text(townName + " added.");
+	showMessage(townName + " added.");
 }
 
 
@@ -54,7 +55,9 @@ function shuffleTowns() {
 	$('#towns').empty();
 	shuffleArray(towns);
 	$('#towns').append(towns);
-	$('#result').text("Towns shuffled.");
+	//$('#result').text("Towns shuffled.");
+	showMessage("Towns shuffled.");
+
 
 	function shuffleArray(array) {
 		for (var i = array.length - 1; i > 0; i--) {
